@@ -1,7 +1,7 @@
 # image-processing
 http://localhost:8810/notebooks/vaishnavii/program2.ipynb
 
-develop a program to display grayscale image using read and write operations.<br>
+1.develop a program to display grayscale image using read and write operations.<br>
 import cv2<br>
 img=cv2.imread('flower2.jpg',0)<br>
 cv2.imshow('flower2',img)<br>
