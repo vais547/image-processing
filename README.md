@@ -102,12 +102,17 @@ Resized image legth width (160, 400, 3)<br>
 ![image](https://user-images.githubusercontent.com/98145574/174039141-54e97615-25c5-412b-a226-4bca6dd9a729.png)<br>
 
 9.import cv2<br>
+#read the image file.<br>
 img=cv2.imread('leaf1.jpg')<br>
 cv2.imshow("RGB",img)<br>
 cv2.waitKey(0)<br>
+
+##gray scale
 img=cv2.imread("leaf1.jpg",0)<br>
 cv2.imshow("gray",img)<br>
 cv2.waitKey(0)<br>
+
+#binary image<br>
 ret,bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
 cv2.imshow("Binary",bw_img)<br>
 cv2.waitKey(0)<br>
