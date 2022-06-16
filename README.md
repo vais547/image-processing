@@ -82,3 +82,43 @@ mode: RGB<br>
 size: (239, 211)<br>
 width: 239<br>
 height: 211<br>
+
+8.resize<br>
+import cv2<br>
+img=cv2.imread('leaf3.jpg')<br>
+print('original image length width',img.shape)<br>
+cv2.imshow('original image',img)<br>
+cv2.waitKey(0)<br>
+imgresize=cv2.resize(img,(400,160))<br>
+cv2.imshow('resized image',imgresize)<br>
+print('Resized image legth width',imgresize.shape)<br>
+cv2.waitKey(0)<br>
+
+output:<br>
+original image length width (177, 284, 3)<br>
+Resized image legth width (160, 400, 3)<br>
+
+![image](https://user-images.githubusercontent.com/98145574/174038962-29d31a06-a2f1-4820-b0f7-4ec79cbc62b8.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/174039141-54e97615-25c5-412b-a226-4bca6dd9a729.png)<br>
+
+9.import cv2<br>
+img=cv2.imread('leaf1.jpg')<br>
+cv2.imshow("RGB",img)<br>
+cv2.waitKey(0)<br>
+img=cv2.imread("leaf1.jpg",0)<br>
+cv2.imshow("gray",img)<br>
+cv2.waitKey(0)<br>
+ret,bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
+cv2.imshow("Binary",bw_img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+
+output:<br>
+![image](https://user-images.githubusercontent.com/98145574/174042660-ca59280b-f556-4665-8ea9-a97f5f4c571b.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/174042719-882b7e9d-93b7-4620-9e18-3e5f93580810.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/174042778-9661ede2-3c31-4807-9762-c44aa8107e57.png)<br>
+
+
+
+
+
