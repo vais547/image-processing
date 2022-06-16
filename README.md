@@ -18,7 +18,7 @@ plt.imshow(image)<br>
 plt.show()<br>
 ![download](https://user-images.githubusercontent.com/98145574/173815741-b99f5bc0-0176-4da3-a1fa-d081a22caea8.png)<br>
 
-3.rotation<br>
+3.#develop a program to dispaly linear tranformation.<br>
 from PIL import Image<br>
 original_Image=Image.open('flower2.jpg')<br>
 rotate_image1=original_Image.rotate(180)<br>
@@ -27,7 +27,7 @@ rotate_image1.show()<br>
 ![image](https://user-images.githubusercontent.com/98145574/173816447-cb37138f-82d8-495b-ba48-40ebd93134da.png)<br>
 
 
-4.<br>
+4.#develop a program to convert colour string into RGB colour values.<br>
 from PIL import ImageColor<br>
 img1=ImageColor.getrgb("yellow")<br>
 print(img1)<br>
@@ -38,14 +38,14 @@ output:<br>
 (255, 255, 0)<br>
 (255, 0, 0)<br>
 
-5.image using color spaces<br>
+5.#write a pprogram to create image using colour spaces. <br>
 from PIL import Image<br>
 img=Image.new('RGB',(200,400),(255,0,0))<br>
 img.show()<br>
 
 ![image](https://user-images.githubusercontent.com/98145574/173816816-bc8e51e4-1c96-4a87-aa6f-408ade55af47.png)<br>
 
-6.image using various colours<br>
+6.#develop a program to visualize images using various colours.<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 import numpy as np<br>
