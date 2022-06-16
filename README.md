@@ -10,7 +10,7 @@ cv2.destroyAllWindows()<br>
 output:<br>
 ![image](https://user-images.githubusercontent.com/98145574/173815026-c72d45aa-07c3-4dab-81d2-6bd3ad7bf938.png)<br>
 
-2.matplotlib<br>
+2.develop a program to display the image using matplotlib<br>
 import cv2<br>
 import matplotlib.pyplot as plt<br>
 image=cv2.imread('flower2.jpg')<br>
