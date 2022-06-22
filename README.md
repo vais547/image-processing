@@ -124,6 +124,15 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/98145574/174042778-9661ede2-3c31-4807-9762-c44aa8107e57.png)<br>
 
 
+from skimage import io
+import matplotlib.pyplot as plt
+url='https://cdn.theatlantic.com/thumbor/viW9N1IQLbCrJ0HMtPRvXPXShkU=/0x131:2555x1568/976x549/media/img/mt/2017/06/shutterstock_319985324/original.jpg'
+image=io.imread(url)
+plt.imshow(image)
+plt.show()
+
+![download](https://user-images.githubusercontent.com/98145574/175021544-cece9979-329f-4b72-bed4-772985eb149b.png)
+
 
 import cv2
 import matplotlib.image as mping
@@ -173,3 +182,10 @@ plt.imshow(final_result)
 plt.show()
 
 ![download](https://user-images.githubusercontent.com/98145574/175018525-539b2079-6856-4b31-8205-bef0dbf0f176.png)
+
+
+blur=cv2.GaussianBlur(final_result, (7,7), 0)
+plt.imshow(blur)
+plt.show()
+
+![download](https://user-images.githubusercontent.com/98145574/175018694-f2084ce4-3e1f-4f7f-858f-7691005efcf5.png)
