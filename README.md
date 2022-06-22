@@ -125,5 +125,51 @@ output:<br>
 
 
 
+import cv2
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+img=mping.imread('fish.jpg')
+plt.imshow(img)
+plt.show()
 
 
+![download](https://user-images.githubusercontent.com/98145574/175018057-96e6bfaa-3c58-44cb-9994-999c5bebc362.png)
+
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+light_orange=(1, 190, 200)
+dark_orange=(18, 255, 255)
+mask=cv2.inRange(hsv_img,light_orange,dark_orange)
+result=cv2.bitwise_and(img,img,mask=mask)
+plt.subplot(1,2,1)
+plt.imshow(mask,cmap="gray")
+plt.subplot(1,2,2)
+plt.imshow(result)
+plt.show()
+
+![download](https://user-images.githubusercontent.com/98145574/175018146-f2f12bb8-5ee3-42c7-90ac-1dc5d76e2bff.png)
+![download](https://user-images.githubusercontent.com/98145574/175018184-c7b9e33a-fad6-4e76-b201-af4b6f45d421.png)
+
+
+light_white=(0,0,200)
+dark_white=(145,60,255)
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)
+result_white=cv2.bitwise_and(img,img,mask=mask_white)
+plt.subplot(1,2,1)
+plt.imshow(mask_white,cmap="gray")
+plt.subplot(1,2,2)
+plt.imshow(result_white)
+plt.show()
+
+![download](https://user-images.githubusercontent.com/98145574/175018278-c425d835-3b28-4bf5-83ac-49870341ab72.png)
+![download](https://user-images.githubusercontent.com/98145574/175018369-33dd1a0b-9f54-455d-b32a-5fa06fc931d5.png)
+
+
+final_mask=mask+mask_white
+final_result=cv2.bitwise_and(img,img,mask=final_mask)
+plt.subplot(1,2,1)
+plt.imshow(final_mask,cmap="gray")
+plt.subplot(1,2,2)
+plt.imshow(final_result)
+plt.show()
+
+![download](https://user-images.githubusercontent.com/98145574/175018525-539b2079-6856-4b31-8205-bef0dbf0f176.png)
