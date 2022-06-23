@@ -233,3 +233,17 @@ C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: 
 Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
 
 ![download](https://user-images.githubusercontent.com/98145574/175256682-8ae60fc8-56f5-401f-9812-05fad778a337.png)
+
+
+import cv2 as c
+import numpy as np
+from PIL import Image
+array=np.zeros([100,200,3],dtype=np.uint8)
+array[:,:100]=[255,130,0]
+array[:,100:]=[0,0,255]
+img=Image.fromarray(array)
+img.save('butterfly2.jpg')
+img.show()
+c.waitKey(0)
+
+![image](https://user-images.githubusercontent.com/98145574/175262066-270b73b8-a719-4ac8-8ecc-a524e6d6f315.png)
