@@ -124,145 +124,145 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/98145574/174042778-9661ede2-3c31-4807-9762-c44aa8107e57.png)<br>
 
 
-from skimage import io
-import matplotlib.pyplot as plt
-url='https://cdn.theatlantic.com/thumbor/viW9N1IQLbCrJ0HMtPRvXPXShkU=/0x131:2555x1568/976x549/media/img/mt/2017/06/shutterstock_319985324/original.jpg'
-image=io.imread(url)
-plt.imshow(image)
-plt.show()
-
-![download](https://user-images.githubusercontent.com/98145574/175021544-cece9979-329f-4b72-bed4-772985eb149b.png)
-
-
-import cv2
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
-img=mping.imread('fish.jpg')
-plt.imshow(img)
-plt.show()
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+url='https://cdn.theatlantic.com/thumbor/viW9N1IQLbCrJ0HMtPRvXPXShkU=/0x131:2555x1568/976x549/media/img/mt/2017/06/shutterstock_319985324/original.jpg'<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br>
+output:<br>
+![download](https://user-images.githubusercontent.com/98145574/175021544-cece9979-329f-4b72-bed4-772985eb149b.png)<br>
 
 
-![download](https://user-images.githubusercontent.com/98145574/175018057-96e6bfaa-3c58-44cb-9994-999c5bebc362.png)
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img=mping.imread('fish.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
 
-hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
-light_orange=(1, 190, 200)
-dark_orange=(18, 255, 255)
-mask=cv2.inRange(hsv_img,light_orange,dark_orange)
-result=cv2.bitwise_and(img,img,mask=mask)
-plt.subplot(1,2,1)
-plt.imshow(mask,cmap="gray")
-plt.subplot(1,2,2)
-plt.imshow(result)
-plt.show()
+output:<br>
+![download](https://user-images.githubusercontent.com/98145574/175018057-96e6bfaa-3c58-44cb-9994-999c5bebc362.png)<br>
 
-![download](https://user-images.githubusercontent.com/98145574/175018146-f2f12bb8-5ee3-42c7-90ac-1dc5d76e2bff.png)
-![download](https://user-images.githubusercontent.com/98145574/175018184-c7b9e33a-fad6-4e76-b201-af4b6f45d421.png)
-
-
-light_white=(0,0,200)
-dark_white=(145,60,255)
-mask_white=cv2.inRange(hsv_img,light_white,dark_white)
-result_white=cv2.bitwise_and(img,img,mask=mask_white)
-plt.subplot(1,2,1)
-plt.imshow(mask_white,cmap="gray")
-plt.subplot(1,2,2)
-plt.imshow(result_white)
-plt.show()
-
-![download](https://user-images.githubusercontent.com/98145574/175018278-c425d835-3b28-4bf5-83ac-49870341ab72.png)
-![download](https://user-images.githubusercontent.com/98145574/175018369-33dd1a0b-9f54-455d-b32a-5fa06fc931d5.png)
+hsv_img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+light_orange=(1, 190, 200)<br>
+dark_orange=(18, 255, 255)<br>
+mask=cv2.inRange(hsv_img,light_orange,dark_orange)<br>
+result=cv2.bitwise_and(img,img,mask=mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result)<br>
+plt.show()<br>
+output:<br>
+![download](https://user-images.githubusercontent.com/98145574/175018146-f2f12bb8-5ee3-42c7-90ac-1dc5d76e2bff.png)<br>
+![download](https://user-images.githubusercontent.com/98145574/175018184-c7b9e33a-fad6-4e76-b201-af4b6f45d421.png)<br>
 
 
-final_mask=mask+mask_white
-final_result=cv2.bitwise_and(img,img,mask=final_mask)
-plt.subplot(1,2,1)
-plt.imshow(final_mask,cmap="gray")
-plt.subplot(1,2,2)
-plt.imshow(final_result)
-plt.show()
-
-![download](https://user-images.githubusercontent.com/98145574/175018525-539b2079-6856-4b31-8205-bef0dbf0f176.png)
-
-
-blur=cv2.GaussianBlur(final_result, (7,7), 0)
-plt.imshow(blur)
-plt.show()
-
-![download](https://user-images.githubusercontent.com/98145574/175018694-f2084ce4-3e1f-4f7f-858f-7691005efcf5.png)
+light_white=(0,0,200)<br>
+dark_white=(145,60,255)<br>
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)<br>
+result_white=cv2.bitwise_and(img,img,mask=mask_white)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask_white,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result_white)<br>
+plt.show()<br>
+output:<br>
+![download](https://user-images.githubusercontent.com/98145574/175018278-c425d835-3b28-4bf5-83ac-49870341ab72.png)<br>
+![download](https://user-images.githubusercontent.com/98145574/175018369-33dd1a0b-9f54-455d-b32a-5fa06fc931d5.png)<br>
 
 
-3)Develop the program to change the image to different color spaces.
-import cv2 
-img=cv2.imread("butterfly2.jpg")
-gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
-hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
-yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
-cv2.imshow("GRAY image",gray)
-cv2.imshow("HSV image",hsv)
-cv2.imshow("LAB image",lab)
-cv2.imshow("HLs image",hls)
-cv2.imshow("YUV image",yuv)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+final_mask=mask+mask_white<br>
+final_result=cv2.bitwise_and(img,img,mask=final_mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(final_mask,cmap="gray")<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(final_result)<br>
+plt.show()<br>
 
-![image](https://user-images.githubusercontent.com/98145574/175263583-3385ca4c-b120-4e3a-9340-67073ba818da.png)
+![download](https://user-images.githubusercontent.com/98145574/175018525-539b2079-6856-4b31-8205-bef0dbf0f176.png)<br>
 
 
+blur=cv2.GaussianBlur(final_result, (7,7), 0)<br>
+plt.imshow(blur)<br>
+plt.show()<br>
 
-import cv2
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
+![download](https://user-images.githubusercontent.com/98145574/175018694-f2084ce4-3e1f-4f7f-858f-7691005efcf5.png)<br>
 
-#Read file
-img1=cv2.imread('butter1.jpg')
-img2=cv2.imread('butter2.jpg')
 
-#numpy add
-fimg1 = img1 + img2
-plt.imshow(fimg1)
-plt.show()
+3)Develop the program to change the image to different color spaces.<br>
+import cv2 <br>
+img=cv2.imread("butterfly2.jpg")<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
+cv2.imshow("GRAY image",gray)<br>
+cv2.imshow("HSV image",hsv)<br>
+cv2.imshow("LAB image",lab)<br>
+cv2.imshow("HLs image",hls)<br>
+cv2.imshow("YUV image",yuv)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+output:<br>
+![image](https://user-images.githubusercontent.com/98145574/175263583-3385ca4c-b120-4e3a-9340-67073ba818da.png)<br>
 
-#saving
-cv2.imwrite('output.jpg',fimg1)
-fimg2 = img1 - img2
-plt.imshow(fimg2)
-plt.show()
-#saving
-cv2.imwrite('output.jpg',fimg2)
-fimg3 = img1 * img2
-plt.imshow(fimg3)
-plt.show()
-#saving
-cv2.imwrite('output.jpg',fimg3)
-fimg4 = img1 / img2
-plt.imshow(fimg4)
-plt.show()
-#saving
-cv2.imwrite('output.jpg',fimg4)
-![download](https://user-images.githubusercontent.com/98145574/175256482-a5175c37-c4b1-430d-8391-310aa90fa583.png)
-![download](https://user-images.githubusercontent.com/98145574/175256520-c86958a5-9ca6-497e-abdf-2336552375a0.png)
-![download](https://user-images.githubusercontent.com/98145574/175256547-9ff23830-b8be-4137-8d4e-e42dd9d3a2e6.png)
 
-C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: RuntimeWarning: divide by zero encountered in true_divide
-  fimg4 = img1 / img2
-C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: RuntimeWarning: invalid value encountered in true_divide
-  fimg4 = img1 / img2
-Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
 
-![download](https://user-images.githubusercontent.com/98145574/175256682-8ae60fc8-56f5-401f-9812-05fad778a337.png)
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
 
-program to create an image using 2D array.
-import cv2 as c
-import numpy as np
-from PIL import Image
-array=np.zeros([100,200,3],dtype=np.uint8)
-array[:,:100]=[255,130,0]
-array[:,100:]=[0,0,255]
-img=Image.fromarray(array)
-img.save('butterfly2.jpg')
-img.show()
-c.waitKey(0)
+#Read file<br>
+img1=cv2.imread('butter1.jpg')<br>
+img2=cv2.imread('butter2.jpg')<br>
 
-![image](https://user-images.githubusercontent.com/98145574/175262066-270b73b8-a719-4ac8-8ecc-a524e6d6f315.png)
+#numpy add<br>
+fimg1 = img1 + img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
+
+#saving<br>
+cv2.imwrite('output.jpg',fimg1)<br>
+fimg2 = img1 - img2<br>
+plt.imshow(fimg2)<br>
+plt.show()<br>
+#saving<br>
+cv2.imwrite('output.jpg',fimg2)<br>
+fimg3 = img1 * img2<br>
+plt.imshow(fimg3)<br>
+plt.show()<br>
+#saving<br>
+cv2.imwrite('output.jpg',fimg3)<br>
+fimg4 = img1 / img2<br>
+plt.imshow(fimg4)<br>
+plt.show()<br>
+#saving<br>
+cv2.imwrite('output.jpg',fimg4)<br>
+![download](https://user-images.githubusercontent.com/98145574/175256482-a5175c37-c4b1-430d-8391-310aa90fa583.png)<br>
+![download](https://user-images.githubusercontent.com/98145574/175256520-c86958a5-9ca6-497e-abdf-2336552375a0.png)<br>
+![download](https://user-images.githubusercontent.com/98145574/175256547-9ff23830-b8be-4137-8d4e-e42dd9d3a2e6.png)<br>
+
+C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: RuntimeWarning: divide by zero encountered in true_divide<br>
+  fimg4 = img1 / img2<br>
+C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: RuntimeWarning: invalid value encountered in true_divide<br>
+  fimg4 = img1 / img2<br>
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).<br>
+output:<br>
+![download](https://user-images.githubusercontent.com/98145574/175256682-8ae60fc8-56f5-401f-9812-05fad778a337.png)<br>
+
+program to create an image using 2D array.<br>
+import cv2 as c<br>
+import numpy as np<br>
+from PIL import Image<br>
+array=np.zeros([100,200,3],dtype=np.uint8)<br>
+array[:,:100]=[255,130,0]<br>
+array[:,100:]=[0,0,255]<br>
+img=Image.fromarray(array)<br>
+img.save('butterfly2.jpg')<br>
+img.show()<br>
+c.waitKey(0)<br>
+
+![image](https://user-images.githubusercontent.com/98145574/175262066-270b73b8-a719-4ac8-8ecc-a524e6d6f315.png)<br>
