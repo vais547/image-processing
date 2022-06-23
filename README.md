@@ -243,13 +243,6 @@ cv2.imwrite('output.jpg',fimg4)<br>
 ![download](https://user-images.githubusercontent.com/98145574/175256482-a5175c37-c4b1-430d-8391-310aa90fa583.png)<br>
 ![download](https://user-images.githubusercontent.com/98145574/175256520-c86958a5-9ca6-497e-abdf-2336552375a0.png)<br>
 ![download](https://user-images.githubusercontent.com/98145574/175256547-9ff23830-b8be-4137-8d4e-e42dd9d3a2e6.png)<br>
-
-C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: RuntimeWarning: divide by zero encountered in true_divide<br>
-  fimg4 = img1 / img2<br>
-C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: RuntimeWarning: invalid value encountered in true_divide<br>
-  fimg4 = img1 / img2<br>
-Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).<br>
-output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/175256682-8ae60fc8-56f5-401f-9812-05fad778a337.png)<br>
 
 14)program to create an image using 2D array.<br>
