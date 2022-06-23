@@ -189,3 +189,47 @@ plt.imshow(blur)
 plt.show()
 
 ![download](https://user-images.githubusercontent.com/98145574/175018694-f2084ce4-3e1f-4f7f-858f-7691005efcf5.png)
+
+
+3)
+import cv2
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+
+#Read file
+img1=cv2.imread('butter1.jpg')
+img2=cv2.imread('butter2.jpg')
+
+#numpy add
+fimg1 = img1 + img2
+plt.imshow(fimg1)
+plt.show()
+
+#saving
+cv2.imwrite('output.jpg',fimg1)
+fimg2 = img1 - img2
+plt.imshow(fimg2)
+plt.show()
+#saving
+cv2.imwrite('output.jpg',fimg2)
+fimg3 = img1 * img2
+plt.imshow(fimg3)
+plt.show()
+#saving
+cv2.imwrite('output.jpg',fimg3)
+fimg4 = img1 / img2
+plt.imshow(fimg4)
+plt.show()
+#saving
+cv2.imwrite('output.jpg',fimg4)
+![download](https://user-images.githubusercontent.com/98145574/175256482-a5175c37-c4b1-430d-8391-310aa90fa583.png)
+![download](https://user-images.githubusercontent.com/98145574/175256520-c86958a5-9ca6-497e-abdf-2336552375a0.png)
+![download](https://user-images.githubusercontent.com/98145574/175256547-9ff23830-b8be-4137-8d4e-e42dd9d3a2e6.png)
+
+C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: RuntimeWarning: divide by zero encountered in true_divide
+  fimg4 = img1 / img2
+C:\Users\Central Computer Lab\AppData\Local\Temp\ipykernel_204\624335271.py:26: RuntimeWarning: invalid value encountered in true_divide
+  fimg4 = img1 / img2
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+
+![download](https://user-images.githubusercontent.com/98145574/175256682-8ae60fc8-56f5-401f-9812-05fad778a337.png)
