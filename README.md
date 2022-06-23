@@ -191,7 +191,26 @@ plt.show()
 ![download](https://user-images.githubusercontent.com/98145574/175018694-f2084ce4-3e1f-4f7f-858f-7691005efcf5.png)
 
 
-3)
+3)Develop the program to change the image to different color spaces.
+import cv2 
+img=cv2.imread("butterfly2.jpg")
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
+cv2.imshow("GRAY image",gray)
+cv2.imshow("HSV image",hsv)
+cv2.imshow("LAB image",lab)
+cv2.imshow("HLs image",hls)
+cv2.imshow("YUV image",yuv)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+![image](https://user-images.githubusercontent.com/98145574/175263583-3385ca4c-b120-4e3a-9340-67073ba818da.png)
+
+
+
 import cv2
 import matplotlib.image as mping
 import matplotlib.pyplot as plt
@@ -234,7 +253,7 @@ Clipping input data to the valid range for imshow with RGB data ([0..1] for floa
 
 ![download](https://user-images.githubusercontent.com/98145574/175256682-8ae60fc8-56f5-401f-9812-05fad778a337.png)
 
-
+program to create an image using 2D array.
 import cv2 as c
 import numpy as np
 from PIL import Image
