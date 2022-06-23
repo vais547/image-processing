@@ -252,7 +252,7 @@ Clipping input data to the valid range for imshow with RGB data ([0..1] for floa
 output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/175256682-8ae60fc8-56f5-401f-9812-05fad778a337.png)<br>
 
-program to create an image using 2D array.<br>
+14)program to create an image using 2D array.<br>
 import cv2 as c<br>
 import numpy as np<br>
 from PIL import Image<br>
