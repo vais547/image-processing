@@ -64,7 +64,7 @@ output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/173817570-ab4b3782-e345-45f0-9441-2951ef91ff0c.png)<br>
 ![download](https://user-images.githubusercontent.com/98145574/173817632-60c12506-8db8-48fa-acc8-47ba0853323e.png)<br>
 
-7.<br>
+7.write a program to display the image attributes.<br>
 image=Image.open('flower2.jpg')<br>
 print("Filename:",image.filename)<br>
 print("Format:",image.format)<br>
@@ -82,7 +82,7 @@ size: (239, 211)<br>
 width: 239<br>
 height: 211<br>
 
-8.resize<br>
+8. write a program to resize the original image.<br>
 import cv2<br>
 img=cv2.imread('leaf3.jpg')<br>
 print('original image length width',img.shape)<br>
@@ -100,7 +100,8 @@ Resized image legth width (160, 400, 3)<br>
 ![image](https://user-images.githubusercontent.com/98145574/174038962-29d31a06-a2f1-4820-b0f7-4ec79cbc62b8.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/174039141-54e97615-25c5-412b-a226-4bca6dd9a729.png)<br>
 
-9.import cv2<br>
+9.write a program to convert the original image into gray scale and then to binary.<br>
+import cv2<br>
 #read the image file.<br>
 img=cv2.imread('leaf1.jpg')<br>
 cv2.imshow("RGB",img)<br>
@@ -122,7 +123,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/98145574/174042719-882b7e9d-93b7-4620-9e18-3e5f93580810.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/174042778-9661ede2-3c31-4807-9762-c44aa8107e57.png)<br>
 
-
+10.develop a program to readimage using url.<br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
 url='https://cdn.theatlantic.com/thumbor/viW9N1IQLbCrJ0HMtPRvXPXShkU=/0x131:2555x1568/976x549/media/img/mt/2017/06/shutterstock_319985324/original.jpg'<br>
@@ -132,7 +133,7 @@ plt.show()<br>
 output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/175021544-cece9979-329f-4b72-bed4-772985eb149b.png)<br>
 
-
+11.write a program to mask and blur the image.<br>
 import cv2<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
@@ -189,7 +190,7 @@ plt.show()<br>
 ![download](https://user-images.githubusercontent.com/98145574/175018694-f2084ce4-3e1f-4f7f-858f-7691005efcf5.png)<br>
 
 
-3)Develop the program to change the image to different color spaces.<br>
+12)Develop the program to change the image to different color spaces.<br>
 import cv2 <br>
 img=cv2.imread("butterfly2.jpg")<br>
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
@@ -208,7 +209,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/98145574/175263583-3385ca4c-b120-4e3a-9340-67073ba818da.png)<br>
 
 
-
+13)write a program to perform arithmetic operations on images.<br>
 import cv2<br>
 import matplotlib.image as mping<br>
 import matplotlib.pyplot as plt<br>
