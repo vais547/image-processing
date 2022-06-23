@@ -156,7 +156,6 @@ plt.imshow(result)<br>
 plt.show()<br>
 output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/175018146-f2f12bb8-5ee3-42c7-90ac-1dc5d76e2bff.png)<br>
-![download](https://user-images.githubusercontent.com/98145574/175018184-c7b9e33a-fad6-4e76-b201-af4b6f45d421.png)<br>
 
 
 light_white=(0,0,200)<br>
@@ -170,7 +169,7 @@ plt.imshow(result_white)<br>
 plt.show()<br>
 output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/175018278-c425d835-3b28-4bf5-83ac-49870341ab72.png)<br>
-![download](https://user-images.githubusercontent.com/98145574/175018369-33dd1a0b-9f54-455d-b32a-5fa06fc931d5.png)<br>
+
 
 
 final_mask=mask+mask_white<br>
