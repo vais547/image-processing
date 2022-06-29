@@ -258,3 +258,116 @@ img.show()<br>
 c.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/98145574/175262066-270b73b8-a719-4ac8-8ecc-a524e6d6f315.png)<br>
+
+15)bitwise operation
+import cv2
+import matplotlib.pyplot as plt
+image1=cv2.imread('butterfly1.jpg',1)
+image2=cv2.imread('butterfly1.jpg')
+ax=plt.subplots(figsize=(15,10))
+bitwiseAnd=cv2.bitwise_and(image1,image2)
+bitwiseOr=cv2.bitwise_or(image1,image2)
+bitwiseXor=cv2.bitwise_xor(image1,image2)
+bitwiseNot_img1=cv2.bitwise_not(image1)
+bitwiseNot_img2=cv2.bitwise_not(image2)
+plt.subplot(151)
+plt.imshow(bitwiseAnd)
+plt.subplot(152)
+plt.imshow(bitwiseOr)
+plt.subplot(153)
+plt.imshow(bitwiseXor)
+plt.subplot(154)
+plt.imshow(bitwiseNot_img1)
+plt.subplot(155)
+plt.imshow(bitwiseNot_img2)
+cv2.waitKey(0)
+
+output:
+![download](https://user-images.githubusercontent.com/98145574/176424847-7b92b00b-b756-4316-a0c6-c0a55a2dd070.png)
+
+16)blur_image
+import cv2
+import numpy as np
+image=cv2.imread('flower4.jpg')
+cv2.imshow('Original Image',image)
+cv2.waitKey(0)
+
+#Gaussian blur
+Gaussian=cv2.GaussianBlur(image,(7,7),0)
+cv2.imshow('Guassian Blurring',Gaussian)
+cv2.waitKey(0)
+
+#Median blur
+median=cv2.medianBlur(image,5)
+cv2.imshow('Median Blurring',median)
+cv2.waitKey(0)
+
+#bilateral blur
+bilateral=cv2.bilateralFilter(image,9,75,75)
+cv2.imshow('Bilateral Blurring',bilateral)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+output:
+![image](https://user-images.githubusercontent.com/98145574/176425100-09a0520d-f4d8-4fe8-b95a-77033434dc70.png)
+![image](https://user-images.githubusercontent.com/98145574/176425555-d23eceb1-5c15-4160-ac02-036517775d68.png)
+![image](https://user-images.githubusercontent.com/98145574/176425703-e7fafc97-e4e8-4266-a86e-3d7097e0b272.png)
+![image](https://user-images.githubusercontent.com/98145574/176425739-62c2dc8b-7130-44b0-85df-0e3f4b7d378b.png)
+
+17)image_enhancement
+from PIL import Image
+from PIL import ImageEnhance
+image=Image.open('flower4.jpg')
+image.show()
+enh_bri=ImageEnhance.Brightness(image)
+brightness=1.5
+
+image_brightened=enh_bri.enhance(brightness)
+image_brightened.show()
+enh_col=ImageEnhance.Color(image)
+color=1.5
+
+image_colored=enh_col.enhance(color)
+image_colored.show()
+enh_con=ImageEnhance.Contrast(image)
+contrast=1.5
+
+image_contrasted=enh_col.enhance(contrast)
+image_contrasted.show()
+enh_sha=ImageEnhance.Sharpness(image)
+sharpness=3.0
+image_sharped=enh_sha.enhance(sharpness)
+image_sharped.show()   
+output:
+![image](https://user-images.githubusercontent.com/98145574/176425910-64e41170-8550-457d-9f4d-957371312c2c.png)
+![image](https://user-images.githubusercontent.com/98145574/176425973-020cc07f-0188-4b06-b083-2f574dfb31e0.png)
+![image](https://user-images.githubusercontent.com/98145574/176426036-f09b7b18-619d-4470-8d1e-bd02714fca8b.png)
+![image](https://user-images.githubusercontent.com/98145574/176426074-3e6eb360-8322-4125-b607-1db65b3efe56.png)
+![image](https://user-images.githubusercontent.com/98145574/176426120-adc303ae-ff33-4168-9b24-8d0eee18081b.png)
+
+18)morphological _operation.
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+from PIL import Image,ImageEnhance
+img=cv2.imread('butterfly4.jpg',0)
+ax=plt.subplots(figsize=(20,10))
+kernel=np.ones((5,5),np.uint8)
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
+erosion=cv2.erode(img,kernel,iterations=1)
+dilation=cv2.dilate(img,kernel,iterations=1)
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
+plt.subplot(151)
+plt.imshow(opening)
+plt.subplot(152)
+plt.imshow(closing)
+plt.subplot(153)
+plt.imshow(erosion)
+plt.subplot(154)
+plt.imshow(dilation)
+plt.subplot(155)
+plt.imshow(gradient)
+cv2.waitKey(0)
+
+output:
+![download](https://user-images.githubusercontent.com/98145574/176426378-7544e78c-0401-4313-bcd5-5223c38ee5dd.png)
