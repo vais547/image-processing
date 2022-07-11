@@ -259,115 +259,115 @@ c.waitKey(0)<br>
 
 ![image](https://user-images.githubusercontent.com/98145574/175262066-270b73b8-a719-4ac8-8ecc-a524e6d6f315.png)<br>
 
-15)bitwise operation
-import cv2
-import matplotlib.pyplot as plt
-image1=cv2.imread('butterfly1.jpg',1)
-image2=cv2.imread('butterfly1.jpg')
-ax=plt.subplots(figsize=(15,10))
-bitwiseAnd=cv2.bitwise_and(image1,image2)
-bitwiseOr=cv2.bitwise_or(image1,image2)
-bitwiseXor=cv2.bitwise_xor(image1,image2)
-bitwiseNot_img1=cv2.bitwise_not(image1)
-bitwiseNot_img2=cv2.bitwise_not(image2)
-plt.subplot(151)
-plt.imshow(bitwiseAnd)
-plt.subplot(152)
-plt.imshow(bitwiseOr)
-plt.subplot(153)
-plt.imshow(bitwiseXor)
-plt.subplot(154)
-plt.imshow(bitwiseNot_img1)
-plt.subplot(155)
-plt.imshow(bitwiseNot_img2)
-cv2.waitKey(0)
+15)bitwise operation<br>
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+image1=cv2.imread('butterfly1.jpg',1)<br>
+image2=cv2.imread('butterfly1.jpg')<br>
+ax=plt.subplots(figsize=(15,10))<br>
+bitwiseAnd=cv2.bitwise_and(image1,image2)<br>
+bitwiseOr=cv2.bitwise_or(image1,image2)<br>
+bitwiseXor=cv2.bitwise_xor(image1,image2)<br>
+bitwiseNot_img1=cv2.bitwise_not(image1)<br>
+bitwiseNot_img2=cv2.bitwise_not(image2)<br>
+plt.subplot(151)<br>
+plt.imshow(bitwiseAnd)<br>
+plt.subplot(152)<br>
+plt.imshow(bitwiseOr)<br>
+plt.subplot(153)<br>
+plt.imshow(bitwiseXor)<br>
+plt.subplot(154)<br>
+plt.imshow(bitwiseNot_img1)<br>
+plt.subplot(155)<br>
+plt.imshow(bitwiseNot_img2)<br>
+cv2.waitKey(0)<br>
 
-output:
-![download](https://user-images.githubusercontent.com/98145574/176424847-7b92b00b-b756-4316-a0c6-c0a55a2dd070.png)
+output:<br>
+![download](https://user-images.githubusercontent.com/98145574/176424847-7b92b00b-b756-4316-a0c6-c0a55a2dd070.png)<br>
 
-16)blur_image
-import cv2
-import numpy as np
-image=cv2.imread('flower4.jpg')
-cv2.imshow('Original Image',image)
-cv2.waitKey(0)
+16)blur_image<br>
+import cv2<br>
+import numpy as np<br>
+image=cv2.imread('flower4.jpg')<br>
+cv2.imshow('Original Image',image)<br>
+cv2.waitKey(0)<br>
 
-#Gaussian blur
-Gaussian=cv2.GaussianBlur(image,(7,7),0)
-cv2.imshow('Guassian Blurring',Gaussian)
-cv2.waitKey(0)
+#Gaussian blur<br>
+Gaussian=cv2.GaussianBlur(image,(7,7),0)<br>
+cv2.imshow('Guassian Blurring',Gaussian)<br>
+cv2.waitKey(0)<br>
 
-#Median blur
-median=cv2.medianBlur(image,5)
-cv2.imshow('Median Blurring',median)
-cv2.waitKey(0)
+#Median blur<br>
+median=cv2.medianBlur(image,5)<br>
+cv2.imshow('Median Blurring',median)<br>
+cv2.waitKey(0)<br>
 
-#bilateral blur
-bilateral=cv2.bilateralFilter(image,9,75,75)
-cv2.imshow('Bilateral Blurring',bilateral)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-output:
-![image](https://user-images.githubusercontent.com/98145574/176425100-09a0520d-f4d8-4fe8-b95a-77033434dc70.png)
-![image](https://user-images.githubusercontent.com/98145574/176425555-d23eceb1-5c15-4160-ac02-036517775d68.png)
-![image](https://user-images.githubusercontent.com/98145574/176425703-e7fafc97-e4e8-4266-a86e-3d7097e0b272.png)
-![image](https://user-images.githubusercontent.com/98145574/176425739-62c2dc8b-7130-44b0-85df-0e3f4b7d378b.png)
+#bilateral blur<br>
+bilateral=cv2.bilateralFilter(image,9,75,75)<br>
+cv2.imshow('Bilateral Blurring',bilateral)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+output:<br>
+![image](https://user-images.githubusercontent.com/98145574/176425100-09a0520d-f4d8-4fe8-b95a-77033434dc70.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/176425555-d23eceb1-5c15-4160-ac02-036517775d68.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/176425703-e7fafc97-e4e8-4266-a86e-3d7097e0b272.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/176425739-62c2dc8b-7130-44b0-85df-0e3f4b7d378b.png)<br>
 
-17)image_enhancement
-from PIL import Image
-from PIL import ImageEnhance
-image=Image.open('flower4.jpg')
-image.show()
-enh_bri=ImageEnhance.Brightness(image)
-brightness=1.5
+17)image_enhancement<br>
+from PIL import Image<br>
+from PIL import ImageEnhance<br>
+image=Image.open('flower4.jpg')<br>
+image.show()<br>
+enh_bri=ImageEnhance.Brightness(image)<br>
+brightness=1.5<br>
 
-image_brightened=enh_bri.enhance(brightness)
-image_brightened.show()
-enh_col=ImageEnhance.Color(image)
-color=1.5
+image_brightened=enh_bri.enhance(brightness)<br>
+image_brightened.show()<br>
+enh_col=ImageEnhance.Color(image)<br>
+color=1.5<br>
 
-image_colored=enh_col.enhance(color)
-image_colored.show()
-enh_con=ImageEnhance.Contrast(image)
-contrast=1.5
+image_colored=enh_col.enhance(color)<br>
+image_colored.show()<br>
+enh_con=ImageEnhance.Contrast(image)<br>
+contrast=1.5<br>
 
-image_contrasted=enh_col.enhance(contrast)
-image_contrasted.show()
-enh_sha=ImageEnhance.Sharpness(image)
-sharpness=3.0
-image_sharped=enh_sha.enhance(sharpness)
-image_sharped.show()   
-output:
-![image](https://user-images.githubusercontent.com/98145574/176425910-64e41170-8550-457d-9f4d-957371312c2c.png)
-![image](https://user-images.githubusercontent.com/98145574/176425973-020cc07f-0188-4b06-b083-2f574dfb31e0.png)
-![image](https://user-images.githubusercontent.com/98145574/176426036-f09b7b18-619d-4470-8d1e-bd02714fca8b.png)
-![image](https://user-images.githubusercontent.com/98145574/176426074-3e6eb360-8322-4125-b607-1db65b3efe56.png)
-![image](https://user-images.githubusercontent.com/98145574/176426120-adc303ae-ff33-4168-9b24-8d0eee18081b.png)
+image_contrasted=enh_col.enhance(contrast)<br>
+image_contrasted.show()<br>
+enh_sha=ImageEnhance.Sharpness(image)<br>
+sharpness=3.0<br>
+image_sharped=enh_sha.enhance(sharpness)<br>
+image_sharped.show()<br>   
+output:<br>
+![image](https://user-images.githubusercontent.com/98145574/176425910-64e41170-8550-457d-9f4d-957371312c2c.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/176425973-020cc07f-0188-4b06-b083-2f574dfb31e0.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/176426036-f09b7b18-619d-4470-8d1e-bd02714fca8b.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/176426074-3e6eb360-8322-4125-b607-1db65b3efe56.png)<br>
+![image](https://user-images.githubusercontent.com/98145574/176426120-adc303ae-ff33-4168-9b24-8d0eee18081b.png)<br>
 
-18)morphological _operation.
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-from PIL import Image,ImageEnhance
-img=cv2.imread('butterfly4.jpg',0)
-ax=plt.subplots(figsize=(20,10))
-kernel=np.ones((5,5),np.uint8)
-opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
-closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
-erosion=cv2.erode(img,kernel,iterations=1)
-dilation=cv2.dilate(img,kernel,iterations=1)
-gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
-plt.subplot(151)
-plt.imshow(opening)
-plt.subplot(152)
-plt.imshow(closing)
-plt.subplot(153)
-plt.imshow(erosion)
-plt.subplot(154)
-plt.imshow(dilation)
-plt.subplot(155)
-plt.imshow(gradient)
-cv2.waitKey(0)
+18)morphological _operation.<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+from PIL import Image,ImageEnhance<br>
+img=cv2.imread('butterfly4.jpg',0)<br>
+ax=plt.subplots(figsize=(20,10))<br>
+kernel=np.ones((5,5),np.uint8)<br>
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)<br>
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)<br>
+erosion=cv2.erode(img,kernel,iterations=1)<br>
+dilation=cv2.dilate(img,kernel,iterations=1)<br>
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)<br>
+plt.subplot(151)<br>
+plt.imshow(opening)<br>
+plt.subplot(152)<br>
+plt.imshow(closing)<br>
+plt.subplot(153)<br>
+plt.imshow(erosion)<br>
+plt.subplot(154)<br>
+plt.imshow(dilation)<br>
+plt.subplot(155)<br>
+plt.imshow(gradient)<br>
+cv2.waitKey(0)<br>
 
-output:
-![download](https://user-images.githubusercontent.com/98145574/176426378-7544e78c-0401-4313-bcd5-5223c38ee5dd.png)
+output:<br>
+![download](https://user-images.githubusercontent.com/98145574/176426378-7544e78c-0401-4313-bcd5-5223c38ee5dd.png)<br>
