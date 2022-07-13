@@ -399,7 +399,7 @@ The image is succussfully saved.
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-image=cv2.imread('cats.jpg',0)
+image=cv2.imread('cat.jpg',0)
 x,y=image.shape
 z=np.zeros((x,y))
 for i in range(0,x):
@@ -414,5 +414,27 @@ plt.imshow(equ,'gray')
 plt.show()
 
 output:
-![download](https://user-images.githubusercontent.com/98145574/178703909-70a3f014-867f-4c20-a8d5-c2bff5a0990a.png)
+
+![download](https://user-images.githubusercontent.com/98145574/178705417-4683e919-a00d-4813-a2f5-49069c633a0e.png)
+
+21)slicing without bakground
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('cat.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+            z[i][j]=0
+equ=np.hstack((image,z))
+plt.title('Graylevel slicing withot background')
+plt.imshow(equ,'gray')
+plt.show()
+
+output:
+![download](https://user-images.githubusercontent.com/98145574/178705575-919654fe-ff7a-4fc8-a00b-fb1e6bcb24a5.png)
 
