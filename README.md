@@ -371,3 +371,48 @@ cv2.waitKey(0)<br>
 
 output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/176426378-7544e78c-0401-4313-bcd5-5223c38ee5dd.png)<br>
+
+19)write a program to
+i)Read the image,
+ii)write (save) the grayscale image and
+iii)dispaly the original iamge and grayscale iamge
+(Note:To save iamge to local storage using Python,we use cv2.imwrite() function on opencv library)
+
+import cv2
+OriginalImg=cv2.imread('butterfly1.jpg')
+GrayImg=cv2.imread('butterfly1.jpg',0)
+isSaved=cv2.imwrite('F:\i.jpg' ,GrayImg)
+cv2.imshow('Dispaly Original Image',OriginalImg)
+cv2.imshow('Dispaly Grayscale Image',GrayImg)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+if isSaved:
+    print('The image is succussfully saved.')
+    
+output:
+The image is succussfully saved.
+
+![image](https://user-images.githubusercontent.com/98145574/178700980-46a134eb-5b39-4d65-8cc3-03b6d449730c.png)
+
+20)slicing with backgroung
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('cats.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+            z[i][j]=image[i][j]
+equ=np.hstack((image,z))
+plt.title('Graylevel slicing with background')
+plt.imshow(equ,'gray')
+plt.show()
+
+output:
+![download](https://user-images.githubusercontent.com/98145574/178703909-70a3f014-867f-4c20-a8d5-c2bff5a0990a.png)
+
