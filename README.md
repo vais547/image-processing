@@ -372,69 +372,69 @@ cv2.waitKey(0)<br>
 output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/176426378-7544e78c-0401-4313-bcd5-5223c38ee5dd.png)<br>
 
-19)write a program to
-i)Read the image,
-ii)write (save) the grayscale image and
-iii)dispaly the original iamge and grayscale iamge
-(Note:To save iamge to local storage using Python,we use cv2.imwrite() function on opencv library)
+19)write a program to<br>
+i)Read the image,<br>
+ii)write (save) the grayscale image and<br>
+iii)dispaly the original iamge and grayscale iamge<br>
+(Note:To save iamge to local storage using Python,we use cv2.imwrite() function on opencv library)<br>
 
-import cv2
-OriginalImg=cv2.imread('butterfly1.jpg')
-GrayImg=cv2.imread('butterfly1.jpg',0)
-isSaved=cv2.imwrite('F:\i.jpg' ,GrayImg)
-cv2.imshow('Dispaly Original Image',OriginalImg)
-cv2.imshow('Dispaly Grayscale Image',GrayImg)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-if isSaved:
-    print('The image is succussfully saved.')
+import cv2<br>
+OriginalImg=cv2.imread('butterfly1.jpg')<br>
+GrayImg=cv2.imread('butterfly1.jpg',0)<br>
+isSaved=cv2.imwrite('F:\i.jpg' ,GrayImg)<br>
+cv2.imshow('Dispaly Original Image',OriginalImg)<br>
+cv2.imshow('Dispaly Grayscale Image',GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+if isSaved:<br>
+    print('The image is succussfully saved.')<br>
     
-output:
-The image is succussfully saved.
+output:<br>
+The image is succussfully saved.<br>
 
-![image](https://user-images.githubusercontent.com/98145574/178700980-46a134eb-5b39-4d65-8cc3-03b6d449730c.png)
+![image](https://user-images.githubusercontent.com/98145574/178700980-46a134eb-5b39-4d65-8cc3-03b6d449730c.png)<br>
 
-20)slicing with backgroung
+20)slicing with backgroung<br>
 
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('cat.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-    for j in range(0,y):
-        if(image[i][j]>50 and image[i][j]<150):
-            z[i][j]=255
-        else:
-            z[i][j]=image[i][j]
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing with background')
-plt.imshow(equ,'gray')
-plt.show()
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('cat.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+            z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing with background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
 
-output:
+output:<br>
 
-![download](https://user-images.githubusercontent.com/98145574/178705417-4683e919-a00d-4813-a2f5-49069c633a0e.png)
+![download](https://user-images.githubusercontent.com/98145574/178705417-4683e919-a00d-4813-a2f5-49069c633a0e.png)<br>
 
-21)slicing without bakground
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('cat.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-    for j in range(0,y):
-        if(image[i][j]>50 and image[i][j]<150):
-            z[i][j]=255
-        else:
-            z[i][j]=0
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing withot background')
-plt.imshow(equ,'gray')
-plt.show()
+21)slicing without bakground<br>
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('cat.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+            z[i][j]=0<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing withot background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
 
-output:
-![download](https://user-images.githubusercontent.com/98145574/178705575-919654fe-ff7a-4fc8-a00b-fb1e6bcb24a5.png)
+output:<br>
+![download](https://user-images.githubusercontent.com/98145574/178705575-919654fe-ff7a-4fc8-a00b-fb1e6bcb24a5.png)<br>
 
