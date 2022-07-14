@@ -438,3 +438,37 @@ plt.show()<br>
 output:<br>
 ![download](https://user-images.githubusercontent.com/98145574/178705575-919654fe-ff7a-4fc8-a00b-fb1e6bcb24a5.png)<br>
 
+22)analyse the image data using histogram.<br>
+import numpy as np<br>
+import skimage.color<br>
+import skimage.io as io<br>
+import matplotlib.pyplot as plt<br>
+
+# Load the image<br>
+image = skimage.io.imread(fname="cats.jpg",as_gray=True)<br>
+image1 = skimage.io.imread(fname="cats.jpg")<br>
+
+fig, ax = plt.subplots()<br>
+plt.imshow(image, cmap="gray")<br>
+plt.show()<br>
+
+fig, ax = plt.subplots()<br>
+plt.imshow(image1, cmap="gray")<br>
+plt.show()<br>
+
+#create the histogram<br>
+histogram, bin_edges=np.histogram(image,bins=256,range=(0,1))<br>
+
+#configue and draw the histogram figure<br>
+plt.figure()<br>
+plt.title("grayscale histogram ")<br>
+plt.xlabel("grayscale value")<br>
+plt.ylabel("pixel count")<br>
+plt.xlim([0.0,1.0])<br>
+plt.plot(bin_edges[0:-1],histogram)<br>
+plt.show()<br>
+
+output:
+![download](https://user-images.githubusercontent.com/98145574/178966950-1b2b66bd-df71-489e-bafa-b1f9e60aa9a2.png)
+![download](https://user-images.githubusercontent.com/98145574/178966972-a5c000b5-9688-4e7b-9517-ee3c970e4ef7.png)
+![download](https://user-images.githubusercontent.com/98145574/178966994-832952d8-f8de-4a4c-8dfe-aa095acdaf72.png)
