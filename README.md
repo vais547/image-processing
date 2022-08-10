@@ -27,7 +27,7 @@ output:<br>
 ![image](https://user-images.githubusercontent.com/98145574/173816447-cb37138f-82d8-495b-ba48-40ebd93134da.png)<br>
 
 
-**4.#develop a program to convert colour string into RGB colour values.*<br>
+**4.#develop a program to convert colour string into RGB colour values.**<br>
 from PIL import ImageColor<br>
 img1=ImageColor.getrgb("yellow")<br>
 print(img1)<br>
@@ -38,7 +38,7 @@ output:<br>
 (255, 255, 0)<br>
 (255, 0, 0)<br>
 
-**5.#write a pprogram to create image using colour spaces.**<br>
+*5.#write a pprogram to create image using colour spaces.*<br>
 from PIL import Image<br>
 img=Image.new('RGB',(200,400),(255,0,0))<br>
 img.show()<br>
