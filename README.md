@@ -206,7 +206,7 @@ cv2.imshow("HLs image",hls)<br>
 cv2.imshow("YUV image",yuv)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
-output:<br>
+**output**:<br>
 ![image](https://user-images.githubusercontent.com/98145574/175263583-3385ca4c-b120-4e3a-9340-67073ba818da.png)<br>
 
 
@@ -344,6 +344,7 @@ enh_sha=ImageEnhance.Sharpness(image)<br>
 sharpness=3.0<br>
 image_sharped=enh_sha.enhance(sharpness)<br>
 image_sharped.show()<br>   
+
 **output:**<br>
 ![image](https://user-images.githubusercontent.com/98145574/176425910-64e41170-8550-457d-9f4d-957371312c2c.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/176425973-020cc07f-0188-4b06-b083-2f574dfb31e0.png)<br>
@@ -396,7 +397,7 @@ cv2.destroyAllWindows()<br>
 if isSaved:<br>
     print('The image is succussfully saved.')<br>
     
-output:<br>
+**output:**<br>
 The image is succussfully saved.<br>
 
 ![image](https://user-images.githubusercontent.com/98145574/178700980-46a134eb-5b39-4d65-8cc3-03b6d449730c.png)<br>
@@ -525,7 +526,7 @@ plt.figure(figsize=(5,5))<br>
 plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
 plt.axis('off');<br>
 
-output:<br>
+**output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/179966805-f1c09579-28d8-467e-bf98-2d93adfa0a47.png)<br>
 
 **3)gamma correction**<br>
