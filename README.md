@@ -38,7 +38,7 @@ output:<br>
 (255, 255, 0)<br>
 (255, 0, 0)<br>
 
-*5.#write a pprogram to create image using colour spaces.*<br>
+**5.#write a pprogram to create image using colour spaces.**<br>
 from PIL import Image<br>
 img=Image.new('RGB',(200,400),(255,0,0))<br>
 img.show()<br>
