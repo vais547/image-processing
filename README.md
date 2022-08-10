@@ -244,6 +244,8 @@ plt.show()<br>
 
 **#saving**<br>
 cv2.imwrite('output.jpg',fimg4)<br>
+
+**output:**
 ![download](https://user-images.githubusercontent.com/98145574/175256482-a5175c37-c4b1-430d-8391-310aa90fa583.png)<br>
 ![download](https://user-images.githubusercontent.com/98145574/175256520-c86958a5-9ca6-497e-abdf-2336552375a0.png)<br>
 ![download](https://user-images.githubusercontent.com/98145574/175256547-9ff23830-b8be-4137-8d4e-e42dd9d3a2e6.png)<br>
@@ -261,6 +263,7 @@ img.save('butterfly2.jpg')<br>
 img.show()<br>
 c.waitKey(0)<br>
 
+**output:**
 ![image](https://user-images.githubusercontent.com/98145574/175262066-270b73b8-a719-4ac8-8ecc-a524e6d6f315.png)<br>
 
 **15)bitwise operation**<br>
@@ -286,7 +289,7 @@ plt.subplot(155)<br>
 plt.imshow(bitwiseNot_img2)<br>
 cv2.waitKey(0)<br>
 
-output:<br>
+**output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/176424847-7b92b00b-b756-4316-a0c6-c0a55a2dd070.png)<br>
 
 **16)blur_image**<br>
@@ -311,7 +314,7 @@ bilateral=cv2.bilateralFilter(image,9,75,75)<br>
 cv2.imshow('Bilateral Blurring',bilateral)<br>
 cv2.waitKey(0)<br>
 cv2.destroyAllWindows()<br>
-output:<br>
+**output:**<br>
 ![image](https://user-images.githubusercontent.com/98145574/176425100-09a0520d-f4d8-4fe8-b95a-77033434dc70.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/176425555-d23eceb1-5c15-4160-ac02-036517775d68.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/176425703-e7fafc97-e4e8-4266-a86e-3d7097e0b272.png)<br>
@@ -341,14 +344,14 @@ enh_sha=ImageEnhance.Sharpness(image)<br>
 sharpness=3.0<br>
 image_sharped=enh_sha.enhance(sharpness)<br>
 image_sharped.show()<br>   
-output:<br>
+**output:**<br>
 ![image](https://user-images.githubusercontent.com/98145574/176425910-64e41170-8550-457d-9f4d-957371312c2c.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/176425973-020cc07f-0188-4b06-b083-2f574dfb31e0.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/176426036-f09b7b18-619d-4470-8d1e-bd02714fca8b.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/176426074-3e6eb360-8322-4125-b607-1db65b3efe56.png)<br>
 ![image](https://user-images.githubusercontent.com/98145574/176426120-adc303ae-ff33-4168-9b24-8d0eee18081b.png)<br>
 
-**18)morphological _operation.**<br>
+**18)morphological_operation.**<br>
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
@@ -373,7 +376,7 @@ plt.subplot(155)<br>
 plt.imshow(gradient)<br>
 cv2.waitKey(0)<br>
 
-output:<br>
+**output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/176426378-7544e78c-0401-4313-bcd5-5223c38ee5dd.png)<br>
 
 **19)write a program to**<br>
@@ -417,7 +420,7 @@ plt.title('Graylevel slicing with background')<br>
 plt.imshow(equ,'gray')<br>
 plt.show()<br>
 
-output:<br>
+**output:**<br>
 
 ![download](https://user-images.githubusercontent.com/98145574/178705417-4683e919-a00d-4813-a2f5-49069c633a0e.png)<br>
 
@@ -439,7 +442,7 @@ plt.title('Graylevel slicing withot background')<br>
 plt.imshow(equ,'gray')<br>
 plt.show()<br>
 
-output:<br>
+**output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/178705575-919654fe-ff7a-4fc8-a00b-fb1e6bcb24a5.png)<br>
 
 **22)analyse the image data using histogram.**<br>
@@ -472,7 +475,7 @@ plt.xlim([0.0,1.0])<br>
 plt.plot(bin_edges[0:-1],histogram)<br>
 plt.show()<br>
 
-output:
+**output:**
 ![download](https://user-images.githubusercontent.com/98145574/178966950-1b2b66bd-df71-489e-bafa-b1f9e60aa9a2.png)<br>
 ![download](https://user-images.githubusercontent.com/98145574/178966972-a5c000b5-9688-4e7b-9517-ee3c970e4ef7.png)<br>
 ![download](https://user-images.githubusercontent.com/98145574/178966994-832952d8-f8de-4a4c-8dfe-aa095acdaf72.png)<br>
@@ -491,7 +494,7 @@ plt.figure(figsize=(6,6))<br>
 plt.imshow(pic);<br>
 plt.axis('off');<br>
 
-output:<br>
+**output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/179966611-b95b272f-105a-4931-9dc1-98bd10bc5ca5.png)<br>
 
 negative=255- pic #neg=(L-1)-img<br>
@@ -499,7 +502,7 @@ plt.figure(figsize= (6,6))<br>
 plt.imshow(negative);<br>
 plt.axis('off');<br>
 
-output:<br>
+**output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/179966657-1ac5b789-cd86-4c32-ac76-d35e44249f4b.png)<br>
 
 **2)log transformation**<br>
@@ -517,7 +520,7 @@ gray=gray(pic)<br>
 max=np.max(gray)<br>
 
 def log_transform():<br>
-    return(255/np.log(1+max))*np.log(1+gray)<br>
+   return(255/np.log(1+max))* np.log(1+gray)<br>
 plt.figure(figsize=(5,5))<br>
 plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))<br>
 plt.axis('off');<br>
@@ -580,7 +583,7 @@ flip.save('f:/pussy.jpg')<br>
 plt.imshow(flip)<br>
 plt.show()<br>
 
-output:<br>
+**output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/179967424-d166e323-f2be-4617-b2ca-36908e6764a3.png)<br>
 ![download](https://user-images.githubusercontent.com/98145574/179967434-7b626f72-a57c-4e87-9ac6-011fb191501c.png)<br>
 
@@ -605,6 +608,6 @@ im1.show()<br>
 plt.imshow(im1)<br>
 plt.show()<br>
 
-output:<br>
+**output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/179967533-29846537-bcc9-40a4-95f5-ab0ea7135dab.png)<br>
 
