@@ -612,3 +612,8 @@ plt.show()<br>
 **output:**<br>
 ![download](https://user-images.githubusercontent.com/98145574/179967533-29846537-bcc9-40a4-95f5-ab0ea7135dab.png)<br>
 
+
+https://builtin.com/data-science/python-image-processing
+
+
+https://learnopencv.com/edge-detection-using-opencv/
