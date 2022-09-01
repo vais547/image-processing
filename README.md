@@ -638,3 +638,25 @@ output:
 ![image](https://user-images.githubusercontent.com/98145574/187904159-fe2e89b1-663b-4412-be7a-62c867d6833d.png)
 
 
+**#roberts edge detection-roberts cross operator**
+import cv2
+import numpy as np
+from scipy import ndimage
+from matplotlib import pyplot as plt
+roberts_cross_v=np.array([[1,0],
+                        [0,-1]])
+roberts_cross_h=np.array([[0,1],
+                        [-1,0]])
+img=cv2.imread('shapes.jpeg',0).astype('float64')
+img/=255.0
+vertical=ndimage.convolve(img, roberts_cross_v )
+horizontal=ndimage.convolve(img, roberts_cross_h )
+
+edged_img=np.sqrt(np.square(horizontal)+np.square(vertical))
+edged_img*=255
+cv2.imwrite("output.jpg",edged_img)
+cv2.imshow("OutputImage", edged_img)
+cv2.waitKey()
+cv2.destroyAllWindows()
+output:
+![image](https://user-images.githubusercontent.com/98145574/187904341-83a78e0f-4716-4455-893a-bb0a719b7973.png)
