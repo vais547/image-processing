@@ -613,7 +613,28 @@ plt.show()<br>
 ![download](https://user-images.githubusercontent.com/98145574/179967533-29846537-bcc9-40a4-95f5-ab0ea7135dab.png)<br>
 
 
-https://builtin.com/data-science/python-image-processing
+**#edge detection using prewitt operartor**
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+img=cv2.imread('shapes.jpeg',)
+gray=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+img_gaussian=cv2.GaussianBlur(gray,(3,3),0)
+
+#prewitt
+kernelx=np.array([[1,1,1],[0,0,0],[-1,-1,-1]])
+kernely=np.array([[-1,0,-1],[-1,0,1],[-1,0,1]])
+img_prewittx=cv2.filter2D(img_gaussian, -1, kernelx)
+img_prewitty=cv2.filter2D(img_gaussian, -1, kernely)
+
+cv2.imshow("original image",img)
+cv2.imshow("prewitt x", img_prewittx)
+cv2.imshow("prewitt y", img_prewitty)
+cv2.imshow("prewitt", img_prewittx+img_prewitty)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+output:
+![image](https://user-images.githubusercontent.com/98145574/187904159-fe2e89b1-663b-4412-be7a-62c867d6833d.png)
 
 
-https://learnopencv.com/edge-detection-using-opencv/
